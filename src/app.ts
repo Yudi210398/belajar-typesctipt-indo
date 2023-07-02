@@ -91,3 +91,26 @@ const minus: Kurang = (
 };
 
 console.log(minus(12, 2, 2));
+
+// ! object as type dan uniom type
+
+type ObjectPerson = {
+  nama: string;
+  age: number;
+  nomorKesukaan: string | number; //! type union
+};
+
+const person: ObjectPerson = {
+  nama: "Hana Safira",
+  age: 22,
+  nomorKesukaan: 9,
+};
+console.log(person);
+
+// ! optional type fungsi
+
+const optionalUmur = (a: number, b?: number): string => {
+  return a + " " + b;
+};
+
+console.log(optionalUmur(23));
